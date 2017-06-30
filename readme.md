@@ -11,7 +11,7 @@
  * 속성
 * 값
 
-[Github 계정](https://github.com/seulbi/)
+[Github 계정](https://github.com/hiwooj/)
 
 오늘은 날씨가 맑은 편입니다.
 햇살이 화사해요.
