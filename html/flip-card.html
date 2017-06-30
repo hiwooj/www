@@ -46,15 +46,30 @@
 <body>
     <div class="container">
         <div id="card">
-            <div class="front">앞면</div>
-            <div class="back">뒷면</div>
+            <img class="front" src="../images/209px-King_of_hearts_fr.svg.png" alt="">
+            <img class="back" src="../images/209px-Queen_of_spades_fr.svg.png" alt="">
+            <!--<div class="front">앞면</div>-->
+            <!--<div class="back">뒷면</div>-->
         </div>
     </div>
+    <button class="btn">Click Me!</button>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>
         $(function() {
             $("#card").click(function() {
                 $(this).toggleClass("flipped");
+            });
+        })
+        $(function() {
+            $("#card").click(function() {
+                $(this).toggleClass("flipped");
+            });
+        });
+    </script>
+    <script>
+        $(function() {
+            $(".btn").on("click", function() {
+                $("#card").toggleClass("flipped");
             });
         });
     </script>
