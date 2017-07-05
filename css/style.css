@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "fontello.css";
 
 /* 웹폰트 선언 */
 
@@ -72,6 +73,15 @@ html {
 body {
     font-family: 'Noto Sans Regular', sans-serif;
     font-size: 1.4rem;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 
@@ -198,7 +208,7 @@ a {
     list-style-type: none;
     position: absolute;
     white-space: nowrap;
-    top: 47px;
+    top: 45px;
 }
 
 .main-menu ul li {
@@ -218,12 +228,12 @@ a {
 }
 
 .main-menu ul a {
-    padding: 0 15px 0 0;
+    padding: 8px 15px 7px 0;
+    display: block;
 }
 
 .about-html {
     display: none;
-    /*top: 0;*/
     left: 0;
 }
 
@@ -264,17 +274,24 @@ a {
     100% {
         font-size: 24px;
         color: rgba(0, 0, 0, 1);
-        transform: translate(400px, 75px);
+        transform: translate(400px, 70px);
     }
 }
 
 @keyframes flower-ani {
     0% {
-        opacity: 1;
+        opacity: 1
     }
     100% {
-        opacity: 0;
+        opacity: 0
     }
+}
+
+.visual-text {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    animation: text-ani 0.5s forwards ease-in-out;
 }
 
 .visual {
@@ -294,20 +311,12 @@ a {
 }
 
 .visual::before {
-    background: url(images/ani_flower_01.png) no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
+    background: url("images/ani_flower_01.png") no-repeat 0 -10px, url(images/ani_flower_02.png) no-repeat 670px 0;
 }
 
 .visual::after {
     background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 0;
-    animation-delay: 2s;
-}
-
-.visual-text {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: inline-block;
-    position: absolute;
-    color: rgba(0, 0, 0, 0);
-    animation: text-ani 0.5s forwards ease-in-out;
+    animation-delay: 1s;
 }
 
 .main-content {
@@ -320,8 +329,6 @@ a {
     justify-content: space-between;
     /*align-items: flex-start;*/
 }
-
-.group {}
 
 .group1 {
     width: 250px;
@@ -336,70 +343,100 @@ a {
     width: 190px;
 }
 
+
+/* 로그인 */
+
 .login {
-    background: radial-gradient(circle at right top, #e5892d, #e0652c);
     padding: 10px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background: radial-gradient(circle at right top, #e5892d, #e0652c);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
 }
 
 .login-heading {
-    font-family: "Noto Sans Bold", sans-serif;
-    font-size: 1.6rem;
     color: #ff0;
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
     text-indent: 10px;
 }
 
 .login-form {
     background: #fff;
-    margin-top: 10px;
     border-radius: 5px 5px 0 0;
     padding: 10px;
+    margin-top: 10px;
 }
 
 .login-form fieldset {
     border: 0;
-    border-bottom: 1px solid #aaa;
-    padding: 0 0 10px 0;
+    padding: 0;
     margin: 0;
     position: relative;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
 }
 
 .user-pw {
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .login-form label {
-    display: inline-block;
     width: 4em;
+    display: inline-block;
     cursor: pointer;
 }
 
 .login-form input {
-    width: 87px;
+    box-sizing: border-box;
+    width: 95px;
     height: 22px;
     border: 1px solid #aaa;
     padding: 1px 1px 1px 5px;
 }
 
 .btn-login {
-    width: 50px;
-    height: 50px;
-    border: 0;
-    padding: 0 5px;
     position: absolute;
     top: 0;
     right: 0;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    padding: 0;
     cursor: pointer;
+    background: hsla(0, 100%, 70%, 1);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1.3rem;
 }
 
 .member {
-    padding: 0 10px 10px 10px;
+    list-style-type: none;
     background: #fff;
     border-radius: 0 0 5px 5px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+    font-size: 1.3rem;
+}
+
+
+/*플로트 이슈를 해결하기 위한 clearfix */
+
+.member::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.icon-user::before,
+.icon-right-open::before {
+    color: #f00;
+}
+
+.join {
+    float: left;
+}
+
+.find {
+    float: right;
 }
 
 .slogan {
