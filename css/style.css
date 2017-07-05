@@ -27,7 +27,8 @@
 
 /* 숨김 콘텐츠 */
 
-legend {
+legend,
+.readable-hidden {
     position: absolute;
     left: -9999em;
 }
@@ -437,6 +438,42 @@ a {
 
 .find {
     float: right;
+}
+
+
+/*유효성 검사 배너 링크*/
+
+.validation {
+    /*background: yellow;*/
+    margin-top: 20px;
+    /*margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: radial-gradient(circle at right top, gray, #999);
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);*/
+}
+
+
+/*.validation-list li {
+    background: url("images/validation_icon.png") no-repeat;
+    list-style-type: none;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 40px;
+    margin-top: 40px;
+}*/
+
+.validation-list a {
+    border: 1px solid #aaa;
+    border-radius: 1px;
+    display: block;
+    height: 30px;
+    margin: 10px 0;
+    padding-left: 45px;
+    background: url("images/validation_icon.png") no-repeat;
+    list-style-type: none;
 }
 
 .slogan {
