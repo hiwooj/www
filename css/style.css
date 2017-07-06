@@ -28,7 +28,7 @@
 /* 숨김 콘텐츠 */
 
 legend,
-.readable-hidden {
+.hidden {
     position: absolute;
     left: -9999em;
 }
@@ -441,39 +441,126 @@ a {
 }
 
 
-/*유효성 검사 배너 링크*/
+/* 유효성 검사 배너 링크 */
 
 .validation {
-    /*background: yellow;*/
     margin-top: 20px;
-    /*margin-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    background: radial-gradient(circle at right top, gray, #999);
-    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);*/
 }
 
-
-/*.validation-list li {
-    background: url("images/validation_icon.png") no-repeat;
+.validation-list {
     list-style-type: none;
-    border: 1px solid #aaa;
-    margin-bottom: 10px;
-    height: 30px;
-    line-height: 30px;
-    padding-left: 40px;
-    margin-top: 40px;
-}*/
+}
 
 .validation-list a {
-    border: 1px solid #aaa;
-    border-radius: 1px;
     display: block;
+    border: 1px solid #aaa;
+    border-radius: 15px;
     height: 30px;
+    line-height: 30px;
     margin: 10px 0;
     padding-left: 45px;
-    background: url("images/validation_icon.png") no-repeat;
-    list-style-type: none;
+    background: url("images/validation_icon.png") no-repeat 20px 50%, linear-gradient(to bottom, #eee 0%, #ccc 100%);
+}
+
+.term {
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.term-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.5rem;
+}
+
+.term-list {
+    margin: 10px 0 0 0;
+}
+
+.term-list::before,
+.term-list::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.term-list-subject,
+.term-list-brief {
+    float: right;
+    width: 145px;
+}
+
+.term-list-brief,
+.term-list-thumbnail {
+    margin: 0;
+}
+
+.term-list-subject {
+    color: #296897;
+    font-family: "Noto Sans Bold";
+}
+
+.term-list-thumbnail {
+    float: left;
+}
+
+.term-list .term-list-brief {
+    margin-top: 5px;
+}
+
+.even .term-list-subject,
+.even .term-list-brief {
+    float: left;
+}
+
+.even .term-list-thumbnail {
+    float: right;
+}
+
+.search {
+    background: #296897;
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 5px 25px;
+    background: linear-gradient(to bottom, #ccc, #fff);
+}
+
+.search-form fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.search-form label {
+    background: pink;
+}
+
+.search-form label::before {
+    background: lime;
+    content: "z";
+    font-family: "webcafeIcon";
+    position: relative;
+    top: 2px;
+}
+
+.search-form input {
+    width: 195px;
+    height: 22px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 1px 1px 1px 5px;
+    margin: 0 5px;
+}
+
+.btn-search {
+    border: 1px solid #aaa;
+    padding: 0 10px;
+    height: 24px;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, #181818, #ccc);
 }
 
 .slogan {
