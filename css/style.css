@@ -563,6 +563,106 @@ a {
     background: linear-gradient(to bottom, #181818, #ccc);
 }
 
+.board {
+    height: 180px;
+}
+
+.notice {
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 25px 5px 25px;
+    background: linear-gradient(to bottom, #ccc, #fff);
+}
+
+.pds {
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    padding: 15px 50px 5px 25px;
+    background: linear-gradient(to bottom, #ccc, #fff);
+}
+
+.notice-heading {
+    float: left;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: #999;
+    background: linear-gradient(to bottom, #296897, #999);
+    padding: 5px, 10px;
+    cursor: pointer;
+}
+
+.pds-heading {
+    float: left;
+    border: 1px solid #aaa;
+    border-radius: 5px 5px 0 0;
+    color: #999;
+    background: linear-gradient(to bottom, #296897, #999);
+    padding: 5px, 10px;
+    cursor: pointer;
+}
+
+.act .notice-heading,
+.act .pds-heading {
+    border-color: #e0652c;
+    border-bottom-color: #fff;
+    background: #fff;
+    color: #e0652c;
+    outline: 0;
+}
+
+.notice-list,
+.pds-list {
+    box-sizing: border-box;
+    width: 100%;
+    background: skyblue;
+    list-style-type: square;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    padding-left: 20px;
+}
+
+.notice-list li,
+.pds-list li {
+    background: pink;
+    margin: 5px 0;
+}
+
+.notice-list a,
+.pds-list a {
+    background: lime;
+    width: 285px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice-list time,
+.pds-list time {
+    background: orange;
+    float: right;
+}
+
+.notice-more,
+.pds-more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: pink;
+}
+
+.notice-more::before,
+.pds-more::before {
+    content: "p";
+    font-family: "webcafeIcon";
+    color: hsla(120, 100%, 30%, 1);
+    position: relative;
+    top: 2px;
+}
+
 .slogan {
     height: 10vh;
 }
