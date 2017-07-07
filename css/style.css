@@ -670,9 +670,9 @@ a {
 }
 
 .news-heading {
-    font-family: "Noto Sans Bold";
-    font-size: 1.6rem;
     color: #e0652c;
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
 }
 
 .news-item {
@@ -683,29 +683,6 @@ a {
 
 .news-item a {
     display: block;
-}
-
-.news-item-thumbnail {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.news-more {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    padding: 8px;
-}
-
-.news-heading {
-    font-size: 1.6rem;
-    font-family: "Noto Sans Bold";
-}
-
-.news-item {
-    margin-top: 30px;
 }
 
 .news-item-heading {
@@ -729,13 +706,13 @@ a {
     margin: 0;
     position: absolute;
     top: 5px;
-    left: 0;
+    left: 5px;
     text-align: center;
 }
 
 .news-item-thumbnail img {
     margin-bottom: 15px;
-    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.5)
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
 .news-more {
@@ -754,11 +731,22 @@ a {
 }
 
 
-/*신규이벤트 및 관련 사이트*/
+/* 신규이벤트 및 관련사이트 */
 
 .event-related {
-    background: brown;
+    background: linear-gradient(to bottom, #eee, #ccc);
     border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.event {
+    border-bottom: 1px solid #aaa;
+    position: relative;
+}
+
+.related {
+    margin-top: 10px;
 }
 
 .event-heading,
@@ -774,7 +762,10 @@ a {
 
 #event-detail {
     margin-top: 10px;
-    background: pink;
+}
+
+#event-detail p {
+    padding-bottom: 10px;
 }
 
 #event-detail img {
@@ -785,40 +776,32 @@ a {
     font-style: normal;
 }
 
+.btn-event {
+    height: 19px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
 .btn-event-prev,
 .btn-event-next {
-    outline: 2px solid #00f;
     width: 18px;
     height: 19px;
     border: 0;
     padding: 19px 0 0 0;
     cursor: pointer;
     overflow: hidden;
-    background: url("images/back_forward.png") no repeat;
-}
-
-.event-heading {
-    font-family: "Noto Sans Bold";
-    font-size: 1.6rem;
-    color: #e0652c;
-}
-
-.event-heading a {
-    display: block;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    height: 30px;
-    line-height: 30px;
-    margin: 10px 0;
-    padding-left: 45px;
+    background: url("images/back_forward.png") no-repeat;
 }
 
 .btn-event-next {
     background-position: 100% 0%;
 }
 
-.btn-event-list:focus,
-.btn-related-list:focus {}
+.btn-event-prev:focus,
+.btn-event-next:focus {
+    outline: 1px dotted #00f;
+}
 
 .related-list {
     list-style-type: none;
@@ -834,11 +817,82 @@ a {
 .related-list:hover,
 .related-list:focus {
     height: 125px;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .related-list a {
+    display: block;
     line-height: 25px;
+    padding-left: 25px;
+}
+
+
+/*인기사이트*/
+
+.favorite {
+    background: #296897;
+    margin-top: 20px
+}
+
+.favorite-list {
+    background: pink;
+    padding: 0;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+}
+
+
+/*.no1::before {
+    content: "1";
+}
+
+.no2::before {
+    content: "2";
+}
+
+.no3::before {
+    content: "3";
+}
+
+.no4::before {
+    content: "4";
+}*/
+
+.favorite-list li {
+    counter-increment: number;
+}
+
+.favorite-list li::before {
+    content: counter(number, decimal);
+    background: #999;
+    border-radius: 2px;
+    padding: 0 5px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.up,
+.down,
+.stop {
+    background: lime;
+    font-style: normal;
+    width: 9px;
+    height: 0;
+    padding-top: 11px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%);
+}
+
+.stop {
+    background-position: 0 50%;
+}
+
+.down {
+    background-position: 0 100%;
 }
 
 
