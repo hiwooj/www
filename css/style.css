@@ -754,6 +754,31 @@ a {
 }
 
 
+/*신규이벤트 및 관련 사이트*/
+
+.event-related {}
+
+.event {}
+
+.event-heading {
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
+    color: #e0652c;
+}
+
+.event-heading a {
+    display: block;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0;
+    padding-left: 45px;
+}
+
+.related {}
+
+
 /* 슬로건 */
 
 .slogan {
