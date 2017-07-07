@@ -652,50 +652,109 @@ a {
 }
 
 
-/*새소식*/
+/* 새소식 */
 
 .news {
-    background: aquamarine;
-    margin-top: 50px;
+    margin-top: 20px;
     position: relative;
-    height: 200px;
+}
+
+.news::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #aaa, #fff);
+    top: 35px;
+    left: 0;
 }
 
 .news-heading {
-    float: left;
-    border: 1px solid #aaa;
-    border-radius: 5px 5px 0 0;
-    color: #999;
-    background: linear-gradient(to bottom, #eee, #ccc);
-    padding: 5px 10px;
-    cursor: pointer;
+    font-family: "Noto Sans Bold";
+    font-size: 1.6rem;
+    color: #e0652c;
 }
 
-.news-list {
-    box-sizing: border-box;
-    width: 100%;
-    list-style-type: square;
+.news-item {
+    margin-top: 30px;
+    padding-left: 130px;
+    position: relative;
+}
+
+.news-item a {
+    display: block;
+}
+
+.news-item-thumbnail {
+    margin: 0;
     position: absolute;
-    top: 45px;
+    top: 0;
     left: 0;
-    padding-left: 20px;
 }
 
-.news-list li {
-    margin: 5px 0;
+.news-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
 }
 
-.news-list a {
-    width: 285px;
-    float: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.news-heading {
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
 }
 
-.news-list time {
-    float: right;
+.news-item {
+    margin-top: 30px;
 }
+
+.news-item-heading {
+    font-family: "Noto Sans Bold";
+}
+
+.news-item-heading::before {
+    content: "r";
+    font-family: "webcafeIcon";
+    position: relative;
+    top: 2px;
+}
+
+.news-item-date,
+.news-item-brief {
+    margin: 5px 0 0 1em;
+    display: block;
+}
+
+.news-item-thumbnail {
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    text-align: center;
+}
+
+.news-item-thumbnail img {
+    margin-bottom: 15px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.5)
+}
+
+.news-more {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 8px;
+}
+
+.news-more::before {
+    content: "p";
+    font-family: "webcafeIcon";
+    color: hsla(120, 100%, 30%, 1);
+    position: relative;
+    top: 2px;
+}
+
+
+/* 슬로건 */
 
 .slogan {
     height: 10vh;
